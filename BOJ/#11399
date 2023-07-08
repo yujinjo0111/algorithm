@@ -1,0 +1,9 @@
+n = int(input())
+array = []
+count = 0
+array = list(map(int, input().split()))
+array.sort()
+for i in range(n):
+    count += (i+1)*array[n-i-1]
+
+print(count)
