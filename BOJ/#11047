@@ -1,0 +1,13 @@
+n, k = map(int, input().split())
+a = []
+number = 0
+for i in range(n):
+    m = int(input())
+    a.append(m)
+a.sort(reverse=True)
+
+for money in a:
+    number += k // money
+    k %= money
+
+print(number)
